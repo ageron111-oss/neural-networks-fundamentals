@@ -1,5 +1,5 @@
 artifact_uri: file:///workspaces/neural-networks-fundamentals/.laborantum/mlflow_logs/853083639859914893/170666e2069f45e5a85f1b56890487d7/artifacts
-end_time: null
+end_time: 1782642806748
 entry_point_name: ''
 experiment_id: '853083639859914893'
 lifecycle_stage: active
@@ -9,6 +9,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1782642422548
-status: 1
+status: 3
 tags: []
 user_id: root

@@ -5,3 +5,4 @@ from . import word2vec
 from . import adversarial
 from . import go_actor_critic
 from . import nerf
+from . import deep_batchnorm_net

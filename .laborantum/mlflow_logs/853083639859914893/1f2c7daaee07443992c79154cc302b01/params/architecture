@@ -1,0 +1,1 @@
+blocks.0: Linear(64, 64) | blocks.1: Linear(64, 64) | blocks.2: Linear(64, 64) | encoder: Linear(784, 64) | proj: Linear(64, 10) | activation: LeakyReLU
