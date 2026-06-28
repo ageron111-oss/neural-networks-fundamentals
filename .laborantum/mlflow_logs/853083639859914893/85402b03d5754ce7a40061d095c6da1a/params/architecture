@@ -1,0 +1,1 @@
+activation: LeakyReLU | lin1: Linear(784, 100) | proj: Linear(100, 10)

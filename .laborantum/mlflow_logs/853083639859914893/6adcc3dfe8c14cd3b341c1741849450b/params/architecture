@@ -1,0 +1,1 @@
+activation: ReLU | lin1: Linear(784, 28) | proj: Linear(28, 10)

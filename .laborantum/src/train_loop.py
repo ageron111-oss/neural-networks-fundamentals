@@ -136,14 +136,17 @@ def _empty_loss_totals(losses):
 
 def _compute_losses(losses, batch):
     return {
+        loss_name: loss(batch) for loss_name, loss in losses.items()
         ## YOUR CODE HERE
     }
 
 
 def _sum_losses(batch_losses):
-    total_loss = None
+    total_loss = 0.0
     for loss_value in batch_losses.values():
-        ...
+        if not isinstance(loss_value, torch.Tensor):
+            loss_value = torch.tensor(loss_value, dtype=torch.float32, requires_grad=True)
+        total_loss = total_loss + loss_value
         ## YOUR CODE HERE
     return total_loss
 
@@ -171,10 +174,10 @@ def _finalize_loss_totals(loss_totals):
 
 
 def _update_metric_totals(metric_totals, metrics, batch):
-    
-    
     for metric_name, metric_fn in metrics.items():
-        ...
+        enumerator, denominator = metric_fn(batch)
+        metric_totals[metric_name]['enumerator'] += float(enumerator)
+        metric_totals[metric_name]['denominator'] += float(denominator)
         ## YOUR CODE HERE
 
 
@@ -247,7 +250,18 @@ def train_model(
 
                 for batch_index, batch in enumerate(train_dl):
                     batch = {'data': batch}
-
+                    model.train()
+                    optimizer.zero_grad()
+                    model(batch)
+                    loss_values = _compute_losses(losses, batch)
+                    batch['losses'] = loss_values
+                    batch['loss'] = _sum_losses(loss_values)
+                    
+                    loss_value = batch['loss']
+                    loss_value.backward()
+                    optimizer.step()
+                    model.eval()
+                    _update_metric_totals(train_metrics, metrics, batch)
                     ## YOUR CODE HERE
                     # Implement one training step:
                     # switch to training mode
@@ -259,7 +273,6 @@ def train_model(
                     # update weights,
                     # switch the model to evaluation mode
                     # update metric numerators/denominators.
-
                     _update_loss_totals(train_losses, loss_values)
                     _update_loss_emas(loss_emas, loss_values)
 
@@ -280,7 +293,14 @@ def train_model(
                 with torch.no_grad():
                     for valid_batch in valid_dl:
                         valid_batch = {'data': valid_batch}
-
+                        model.eval()
+                        model(valid_batch)
+                        valid_loss_values = _compute_losses(losses, valid_batch)
+                        valid_batch['losses'] = valid_loss_values
+                        valid_batch['loss'] = _sum_losses(valid_loss_values)
+                                                        
+                        
+                        _update_metric_totals(valid_metrics, metrics, valid_batch)
                         ## YOUR CODE HERE
                         # Implement one validation step:
                         # switch the model to evaluation mode

@@ -1,0 +1,375 @@
+{
+    "correct": 0.6486486486486487,
+    "testStatus": [
+        {
+            "name": "root -> seed_check -> python.random -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> seed_check -> python.random -> 1",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> seed_check -> python.random -> 2",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> seed_check -> python.random -> 3",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> seed_check -> numpy.random.rand",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> seed_check -> torch.rand",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> seed_check -> torch.backends.cudnn.deterministic",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> noise_shape -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> noise_dtype",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> image_shape -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> image_shape -> 1",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> image_dtype",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> label_dtype",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> noise_mean",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> image_mean",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> check_batch -> data -> noise",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> check_batch -> data -> image",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> check_batch -> signals -> generated",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> check_batch -> signals -> discriminator_scores",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 6.662548"
+        },
+        {
+            "name": "root -> check_batch -> signals -> fake_scores",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 1.7297522"
+        },
+        {
+            "name": "root -> check_batch -> signals -> discriminator_logits",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 1.8701957"
+        },
+        {
+            "name": "root -> check_batch -> signals -> fake_logits",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 0.60237086"
+        },
+        {
+            "name": "root -> check_batch -> signals -> real_scores",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 11.595344"
+        },
+        {
+            "name": "root -> check_batch -> signals -> real_logits",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 3.1380208"
+        },
+        {
+            "name": "root -> check_batch -> postprocessed -> discriminator_score",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 6.662548"
+        },
+        {
+            "name": "root -> check_batch -> postprocessed -> fake_score",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 1.7297522"
+        },
+        {
+            "name": "root -> check_batch -> postprocessed -> discriminator_probability",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 0.02394453"
+        },
+        {
+            "name": "root -> check_batch -> postprocessed -> fake_probability",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 0.039824463"
+        },
+        {
+            "name": "root -> check_batch -> postprocessed -> real_score",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 11.595344"
+        },
+        {
+            "name": "root -> check_batch -> postprocessed -> real_probability",
+            "ok": false,
+            "status": "FAILED: answers do not match:\nMaximal average mismatch: 0.0001\nreceived average mismatch: 0.008064598"
+        },
+        {
+            "name": "root -> generated_shape -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> generated_shape -> 1",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> discriminator_logits_shape -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> fake_logits_shape -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> real_logits_shape -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> bridge_class",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> loss_names -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> metric_names -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_class",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> lr",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> betas -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> betas -> 1",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> eps",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> weight_decay",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> amsgrad",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> maximize",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> foreach",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> capturable",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> differentiable",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> fused",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_defaults -> decoupled_weight_decay",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_group_lrs -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> optimizer_group_lrs -> 1",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> test_loss_val -> classification",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.5823490619659424,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> test_metrics_val -> discriminator_accuracy -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> test_metrics_val -> discriminator_accuracy -> 1",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> train_batch",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> valid_batch",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> train_gan_loss_history -> 0",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 4.2553449678441595,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> train_gan_loss_history -> 1",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.019197100449224118,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> train_gan_loss_history -> 2",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.14486030360038188,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> valid_gan_loss_history -> 0",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.009632959166897125,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> valid_gan_loss_history -> 1",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.03843767989574599,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> valid_gan_loss_history -> 2",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.3925084168490631,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> train_discriminator_accuracy_history -> 0",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.0065701684041570285,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> train_discriminator_accuracy_history -> 1",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.0056697131474660045,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> train_discriminator_accuracy_history -> 2",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.041864017984707735,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> valid_discriminator_accuracy_history -> 0",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.005059307097889043,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> valid_discriminator_accuracy_history -> 1",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.011177326774100105,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> valid_discriminator_accuracy_history -> 2",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.1421059866909209,'\n                    that is larger than eps (0.0001)"
+        },
+        {
+            "name": "root -> generated_visualization_shape -> 0",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> generated_visualization_shape -> 1",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> generated_visualization_shape -> 2",
+            "ok": true,
+            "status": "OK"
+        },
+        {
+            "name": "root -> generated_visualization_mean",
+            "ok": false,
+            "status": "\n                    FAILED: Incorrect answer. Misfit is 0.01050234166905284,'\n                    that is larger than eps (0.0001)"
+        }
+    ]
+}

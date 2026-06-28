@@ -1,0 +1,1 @@
+activation: ReLU | lin: Linear(784, 10)
